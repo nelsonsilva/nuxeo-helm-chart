@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart for Nuxeo Web UI
+name: nuxeo-web-ui
+version: 3.1.0-SNAPSHOT

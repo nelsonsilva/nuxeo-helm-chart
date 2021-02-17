@@ -1,0 +1,16 @@
+image:
+  repository: $DOCKER_REGISTRY/$DOCKER_IMAGE
+  tag: $VERSION
+  pullPolicy: Always
+service:
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 80
+ingress:
+  hostname: $HOSTNAME
+  tls: 
+    - hosts:
+      - $HOSTNAME
+      secretName: static-wildcard-tls
+  annotations:
+    kubernetes.io/ingress.class: nginx
